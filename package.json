@@ -1,16 +1,14 @@
 {
-  "name": "TheSaaS",
-  "version": "2.2.3",
-  "description": "Responsive Bootstrap 4 SaaS, Software & WebApp Template",
+  "name": "Xnail",
+  "version": "2.2.2",
+  "description": "GenesisLab",
   "private": true,
   "keywords": [
-    "landing",
-    "startup",
-    "webapp",
-    "saas"
+    "shop",
+    "startup"
   ],
-  "author": "TheThemeio",
-  "homepage": "http://thetheme.io/thesaas",
+  "author": "Deface",
+  "homepage": "https://xnail.shop",
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
