@@ -3,18 +3,24 @@
         "name": "Hartmetallfräser",
         "view": 1256,
         "price": 2,
-        "group": "diamand"
+        "group": "diamand",
+        "discount": 20,
+        "img": "http://thetheme.io/thesaas/assets/img/shop/11.jpg"
     },
     {
         "name": "Hartmetallfräser",
         "view": 1256,
         "price": 2,
-        "group": "steal"
+        "group": "steal",
+        "discount": 5,
+        "img": "http://thetheme.io/thesaas/assets/img/shop/14.jpg"
     },
     {
         "name": "Hartmetallfräser",
         "view": 1256,
         "price": 2,
-        "group": "steal"
+        "group": "steal",
+        "discount": 5,
+        "img": "http://thetheme.io/thesaas/assets/img/shop/13.jpg"
     }
 ]
