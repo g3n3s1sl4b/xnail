@@ -30,8 +30,7 @@
   <!-- Topbar -->
   <section class="topbar d-lg-flex">
     <div class="container small-3">
-
-
+      
       <div>
         TEL: +49 (1511) 9420202
         <span class="topbar-divider"></span>
@@ -343,6 +342,34 @@
 
   <!-- Scripts -->
   <script src="assets/js/page.min.js"></script>
+
+  <!-- Smartbasket - Проверить надо ли он -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+<div class="smart-basket__wrapper"></div>
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'клас обвертки карточки товара',
+				buttonAddToBasket: 'клас кнопки купить',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'класс корзины',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+				smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+	</script>
+
 
 </body>
 
