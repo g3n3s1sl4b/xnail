@@ -44,13 +44,11 @@
 	<a class="тут ваш класс" 
 
 
-                    data-sb-id-or-vendor-code="артикул"
+  data-sb-id-or-vendor-code="артикул"
   data-sb-product-name="Название товара"
   data-sb-product-price="Цена"
   data-sb-product-quantity="1"
   data-sb-product-img="ссылка на картинку которая соответствует товару"
-
-
   href="#">Добавить в корзину (или что вы там написали)</a>
 
 !!! В цене пробелов быть не должно

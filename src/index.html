@@ -18,8 +18,7 @@
 
   <!--  Open Graph Tags -->
   <meta property="og:title" content="Nail Shop">
-  <meta property="og:description"
-    content="Nail Shop">
+  <meta property="og:description" content="Nail Shop">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
   <meta name="twitter:card" content="">
@@ -77,7 +76,10 @@
         </nav>
       </section>
 
-      <a class="btn btn-sm btn-dark" href="catalog.html">CART</a>
+      <!-- <a class="cart" href="catalog.html">CART</a> -->
+      <a class="cart" href="#">
+      <button class="btn btn-dark"></button>
+      </a>
 
 
 
@@ -187,8 +189,50 @@
           <hr>
           <p class="lead">Manicure &amp; Pedicure</p>
         </header>
+
+
         <div class="row gap-y" id="products">
+          <div class="col-md-6 col-xl-3" data-shuffle="item" data-groups=steal>
+            <div class="product-3">
+            <a class="product-media" href="#">
+            <!-- <span class="badge badge-success badge-pos-right">-20%</span> -->
+            <img src=http://thetheme.io/thesaas/assets/img/shop/14.jpg alt="product">
+            </a>
+            <div class="product-detail">
+            <div class="product-name">Test</div>
+
+            
+
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group mr-2" role="group" aria-label="First group">
+                <div class="product__quantity"></div>
+              </div>
+              
+              <a class="order"
+              data-sb-id-or-vendor-code=123
+              data-sb-product-name=TEST
+              data-sb-product-price=1
+              data-sb-product-quantity="1"
+              data-sb-product-img=http://thetheme.io/thesaas/assets/img/shop/14.jpg
+              >
+              <button type="button" class="btn btn-label btn-success">
+                <label><i class="fa fa-shopping-cart"></i></label>
+                <div class="product__price"><span class="product__price-number">5</span> €</div>
+              </button></a>
+            </div>
+
+
+
+
+
+            
+            </div>
+            </div>
+            </div>
         </div>
+
+
+
         <div class="text-center mt-7">
           <a class="btn btn-outline-primary px-7" href="#">View all</a>
         </div>
@@ -316,54 +360,54 @@
 
       </div>
     </section>
-<!-- CONTACT -->
-<section class="section bg-light">
-  <div class="container">
-    <header class="section-header">
-      <small>contact</small>
-      <h2>Let's Talk</h2>
-      <hr />
-      <p class="lead">
-        
-      </p>
-    </header>
+    <!-- CONTACT -->
+    <section class="section bg-light">
+      <div class="container">
+        <header class="section-header">
+          <small>contact</small>
+          <h2>Let's Talk</h2>
+          <hr />
+          <p class="lead">
 
-    <div class="row gap-y">
-      <div class="col-md-6 col-xl-3">
-        <div class="card card-body shadow-3 text-center bg-success text-white">
-          <p class="my-5"><i class="icon-chat lead-6"></i></p>
-          <h5 class="mb-5 fw-500">Whatsapp</h5>
-          <p>+49 (1511) 9420202</p>
+          </p>
+        </header>
+
+        <div class="row gap-y">
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-body shadow-3 text-center bg-success text-white">
+              <p class="my-5"><i class="icon-chat lead-6"></i></p>
+              <h5 class="mb-5 fw-500">Whatsapp</h5>
+              <p>+49 (1511) 9420202</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-body shadow-3 text-center bg-primary text-white">
+              <p class="my-5"><i class="icon-pencil lead-6"></i></p>
+              <h5 class="mb-5 fw-500">Request</h5>
+              <p><a class="" data-toggle="modal" data-target="#modal-request">Online Form</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-body shadow-3 text-center bg-info text-white">
+              <p class="my-5"><i class="icon-envelope lead-6"></i></p>
+              <h5 class="mb-5 fw-500">E-Mail</h5>
+              <p>info@xnail.shop</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-body shadow-3 text-center bg-warning text-white">
+              <p class="my-5"><i class="icon-streetsign lead-6"></i></p>
+              <h5 class="mb-5 fw-500">Store</h5>
+              <p>Munich, Germany</p>
+            </div>
+          </div>
         </div>
       </div>
-
-   <div class="col-md-6 col-xl-3">
-        <div class="card card-body shadow-3 text-center bg-primary text-white">
-          <p class="my-5"><i class="icon-pencil lead-6"></i></p>
-          <h5 class="mb-5 fw-500">Request</h5>
-          <p><a class="" data-toggle="modal" data-target="#modal-request">Online Form</a></p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-xl-3">
-        <div class="card card-body shadow-3 text-center bg-info text-white">
-          <p class="my-5"><i class="icon-envelope lead-6"></i></p>
-          <h5 class="mb-5 fw-500">E-Mail</h5>
-          <p>info@xnail.shop</p>
-        </div>
-      </div>
- 
-      <div class="col-md-6 col-xl-3">
-        <div class="card card-body shadow-3 text-center bg-warning text-white">
-          <p class="my-5"><i class="icon-streetsign lead-6"></i></p>
-          <h5 class="mb-5 fw-500">Store</h5>
-          <p>Munich, Germany</p>
-        </div>
-      </div> 
-    </div>
-  </div>
-</section>
-<!-- ./CONTACT -->
+    </section>
+    <!-- ./CONTACT -->
 
 
   </main>
@@ -400,95 +444,120 @@
 
 
 
- <!-- Modal 1 -->
- <div class="modal fade" id="modal-request" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal-request" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-      <div class="modal-body p-md-0">
-        <div class="row no-gutters">
-          <div class="col-md-4 col-xl-6 d-none d-md-flex bg-img rounded-left" style="background-image: url(/assets/img/bg/request.jpg)"></div>
+        <div class="modal-body p-md-0">
+          <div class="row no-gutters">
+            <div class="col-md-4 col-xl-6 d-none d-md-flex bg-img rounded-left"
+              style="background-image: url(/assets/img/bg/request.jpg)"></div>
 
-          <div class="col-md-8 col-xl-5 mx-auto">
-            <form class="py-7">
-              <h3><strong>Need Help?</strong></h3>
-              <p>We will answer next 24h.</p>
-              <hr class="w-10">
-              <div class="form-group">
-                <input class="form-control" type="text" name="NAME" placeholder="Your Name">
-              </div>
+            <div class="col-md-8 col-xl-5 mx-auto">
+              <form class="py-7">
+                <h3><strong>Need Help?</strong></h3>
+                <p>We will answer next 24h.</p>
+                <hr class="w-10">
+                <div class="form-group">
+                  <input class="form-control" type="text" name="NAME" placeholder="Your Name">
+                </div>
 
-              <div class="form-group">
-                <input class="form-control" type="email" name="EMAIL" placeholder="Your Email">
-              </div>
+                <div class="form-group">
+                  <input class="form-control" type="email" name="EMAIL" placeholder="Your Email">
+                </div>
 
-              <button class="btn btn-lg btn-block btn-primary">Send</button>
-            </form>
+                <button class="btn btn-lg btn-block btn-primary">Send</button>
+              </form>
 
-            <hr>
+              <hr>
 
-            <div class="row align-items-center mb-5">
-              <div class="col">
-                <p class="small-3 text-uppercase text-lightest ls-1 mb-0"><strong>Follow Us</strong></p>
-              </div>
+              <div class="row align-items-center mb-5">
+                <div class="col">
+                  <p class="small-3 text-uppercase text-lightest ls-1 mb-0"><strong>Follow Us</strong></p>
+                </div>
 
-              <div class="col-auto">
-                <div class="social social-bg-gray social-hover-bg-brand">
-                  <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
-                  <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
-                  <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                <div class="col-auto">
+                  <div class="social social-bg-gray social-hover-bg-brand">
+                    <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>
 
-    <!-- Modal 2-->
-    <div class="modal fade" id="modal-catalog" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content bg-img bg-img-bottom" style="background-image: url(/assets/img/bg/catalog.jpg)">
+  <!-- Modal 2-->
+  <div class="modal fade" id="modal-catalog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content bg-img bg-img-bottom" style="background-image: url(/assets/img/bg/catalog.jpg)">
 
-          <div class="modal-body text-white">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="row">
-              <div class="col-md-8 ml-auto">
-                <form class="input-glass p-5 p-md-7">
-                  <h2>Need Product Catalog?</h2>
-                  <p class="lead-1">We will send as PDF file</p>
-                  <hr class="w-10">
-                  <div class="input-group input-group-lg">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fa fa-envelope-open-o"></i></span>
-                    </div>
-                    <input class="form-control" type="email" name="EMAIL" placeholder="Enter Your Email">
-                    <div class="input-group-append">
-                      <button class="btn btn-glass btn-light"><i class="fa fa-paper-plane"></i></button>
-                    </div>
+        <div class="modal-body text-white">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="row">
+            <div class="col-md-8 ml-auto">
+              <form class="input-glass p-5 p-md-7">
+                <h2>Need Product Catalog?</h2>
+                <p class="lead-1">We will send as PDF file</p>
+                <hr class="w-10">
+                <div class="input-group input-group-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-envelope-open-o"></i></span>
                   </div>
-                </form>
+                  <input class="form-control" type="email" name="EMAIL" placeholder="Enter Your Email">
+                  <div class="input-group-append">
+                    <button class="btn btn-glass btn-light"><i class="fa fa-paper-plane"></i></button>
+                  </div>
+                </div>
+              </form>
 
-              </div>
             </div>
           </div>
-
         </div>
+
       </div>
     </div>
-
-
-
-
+  </div>
 
   <!-- Scripts -->
   <script src="assets/js/page.min.js"></script>
+  
+  <!-- Basket Setup -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <div class="smart-basket__wrapper"></div>
+  <script src="./smartbasket/js/smartbasket.min.js"></script>
+  <script>
+    $(function () {
+      $('.smart-basket__wrapper').smbasket({
+        productElement: 'product-detail',
+        buttonAddToBasket: 'order',
+        productPrice: 'product__price-number',
+        productSize: 'product__size-element',
+        productQuantityWrapper: 'product__quantity',
+        smartBasketMinArea: 'cart',
+        countryCode: '+49',
+        smartBasketCurrency: '€',
+        smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+        agreement: {
+          isRequired: true,
+          isChecked: true,
+          isLink: 'https://artstranger.ru/privacy.html',
+        },
+        nameIsRequired: false,
+      });
+    });
+  </script>
+
+
 
 </body>
 
