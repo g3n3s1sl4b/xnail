@@ -7,6 +7,16 @@
         "group": "diamand",
         "count": 10,
         "discount": 20,
-        "image": "http://thetheme.io/thesaas/assets/img/shop/11.jpg"
+        "image": "../assets/img/bg/request.jpg"
+    },
+    {
+        "id": 2,
+        "onSale": true,
+        "name": "Item",
+        "price": 100,
+        "group": "diamand",
+        "count": 10,
+        "discount": 20,
+        "image": "../assets/img/bg/request.jpg"
     }
 ]

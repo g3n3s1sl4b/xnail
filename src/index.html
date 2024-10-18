@@ -12,10 +12,6 @@
   <!-- Styles -->
   <link href="assets/css/page.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="icon" href="assets/img/favicon.png">
@@ -52,7 +48,8 @@
 
 
     </div>
-  </section><!-- /.topbar -->
+  </section>
+  <!-- /.topbar -->
 
 
   <!-- Navbar -->
@@ -80,11 +77,9 @@
         </nav>
       </section>
 
-      <!-- <a class="cart" href="catalog.html">CART</a> -->
-      
       
      
-          <div class="myCart">
+          <div class="iconCart">
           <button type="button" class="btn btn-label btn-secondary">
               <label><div class="totalQuantity">0</div></label>Cart
           </button>
@@ -201,30 +196,25 @@
         </header>
 
         <div class="row gap-y">
-
-          <div class="col-md-6 col-xl-4">
-            <div class="product-3">
-              <a class="product-media" href="#">
-                <span class="badge badge-pill badge-success badge-pos-right">-25%</span>
+      
+          <div class="listProduct">
+          <div class="item"> 
+               <div class="col-md-6 col-xl-4">
+              <div class="product-3 mb-3">
+                <span class="badge badge-pill badge-primary badge-pos-left">New</span>
                 <img src="../assets/img/bg/request.jpg" alt="product">
-              </a>
-
               <div class="product-detail">
-                <h6><a href="#">Sony PlayStation 4</a></h6>
-                <div class="product-price"><s>$299</s> $224</div>
-                <button class="btn btn-success">Add To Cart</button>
-
+                <h6><a href="#">Apple EarPods</a></h6>
+                <div class="product-price">$160</div>
               </div>
             </div>
-          </div>
+            </div>
+           </div>
+          </div> 
 
         </div>
 
-        <div class="text-center mt-7">
-          <a class="btn btn-outline-primary px-7" href="#">View all</a>
         </div>
-
-      </div>
     </section>
 
 
@@ -360,7 +350,7 @@
         </header>
 
         <div class="row gap-y">
-          <div class="col-md-6 col-xl-4">
+          <div class="col-md-6 col-xl-3">
             <div class="card card-body shadow-3 text-center bg-success text-white">
               <p class="my-5"><i class="icon-chat lead-6"></i></p>
               <h5 class="mb-5 fw-500">Whatsapp</h5>
@@ -395,6 +385,60 @@
       </div>
     </section>
     <!-- ./CONTACT -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="cart">
+      <h2>
+          CART
+      </h2>
+
+      <div class="listCart">
+
+
+          <div class="item">
+              <img src="../assets/img/bg/request.jpg">
+              <div class="content">
+                  <div class="name">CoPilot / Black / Automatic</div>
+                  <div class="price">$550 / 1 product</div>
+              </div>
+              <div class="quantity">
+                  <button>-</button>
+                  <span class="value">3</span>
+                  <button>+</button>
+              </div>
+          </div>
+
+
+      </div>
+
+      <div class="buttons">
+          <div class="close">
+              CLOSE
+          </div>
+          <div class="checkout">
+              <a href="checkout.html">CHECKOUT</a>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
 
 
   
@@ -520,6 +564,156 @@
   <!-- Scripts -->
   <script src="assets/js/page.min.js"></script>
   
+<script>
+let iconCart = document.querySelector('.iconCart');
+let cart = document.querySelector('.cart');
+let container = document.querySelector('.container');
+let close = document.querySelector('.close');
+
+iconCart.addEventListener('click', function(){
+    if(cart.style.right == '-100%'){
+        cart.style.right = '0';
+        container.style.transform = 'translateX(-400px)';
+    }else{
+        cart.style.right = '-100%';
+        container.style.transform = 'translateX(0)';
+    }
+})
+close.addEventListener('click', function (){
+    cart.style.right = '-100%';
+    container.style.transform = 'translateX(0)';
+})
+
+let products = null;
+// get data from file json
+fetch('product.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+        console.log(products);
+})
+
+//show data product in list 
+function addDataToHTML(){
+    // remove datas default from HTML
+    let listProductHTML = document.querySelector('.listProduct');
+    listProductHTML.innerHTML = '';
+
+    // add new datas
+    if(products != null) // if has data
+    {
+        products.forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.innerHTML = `
+             <div class="col-md-6 col-xl-4">
+              
+             <div class="product-3 mb-3">
+                <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+                <img src="${product.image}" alt="product">
+
+              <div class="product-detail">
+                    <h6><a href="#">${product.name}</a></h6>
+                    <div class="product-price">${product.price}</div>
+                    <button class="btn btn-success" onclick="addCart(${product.id})">Add To Cart</button>
+              </div>
+            </div>
+            </div>
+            `;
+
+            listProductHTML.appendChild(newProduct);
+
+        });
+    }
+}
+//use cookie so the cart doesn't get lost on refresh page
+
+let listCart = [];
+function checkCart(){
+    var cookieValue = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('listCart='));
+    if(cookieValue){
+        listCart = JSON.parse(cookieValue.split('=')[1]);
+    }else{
+        listCart = [];
+    }
+}
+checkCart();
+function addCart($idProduct){
+    let productsCopy = JSON.parse(JSON.stringify(products));
+    //// If this product is not in the cart
+    if(!listCart[$idProduct]) 
+    {
+        listCart[$idProduct] = productsCopy.filter(product => product.id == $idProduct)[0];
+        listCart[$idProduct].quantity = 1;
+    }else{
+        //If this product is already in the cart.
+        //I just increased the quantity
+        listCart[$idProduct].quantity++;
+    }
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+
+    addCartToHTML();
+}
+addCartToHTML();
+function addCartToHTML(){
+    // clear data default
+    let listCartHTML = document.querySelector('.listCart');
+    listCartHTML.innerHTML = '';
+
+    let totalHTML = document.querySelector('.totalQuantity');
+    let totalQuantity = 0;
+    // if has product in Cart
+    if(listCart){
+        listCart.forEach(product => {
+            if(product){
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+                newCart.innerHTML = 
+                    `<img src="${product.image}">
+                    <div class="content">
+                        <div class="name">${product.name}</div>
+                        <div class="price">$${product.price} / 1 product</div>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="changeQuantity(${product.id}, '-')">-</button>
+                        <span class="value">${product.quantity}</span>
+                        <button onclick="changeQuantity(${product.id}, '+')">+</button>
+                    </div>`;
+                listCartHTML.appendChild(newCart);
+                totalQuantity = totalQuantity + product.quantity;
+            }
+        })
+    }
+    totalHTML.innerText = totalQuantity;
+}
+function changeQuantity($idProduct, $type){
+    switch ($type) {
+        case '+':
+            listCart[$idProduct].quantity++;
+            break;
+        case '-':
+            listCart[$idProduct].quantity--;
+
+            // if quantity <= 0 then remove product in cart
+            if(listCart[$idProduct].quantity <= 0){
+                delete listCart[$idProduct];
+            }
+            break;
+    
+        default:
+            break;
+    }
+    // save new data in cookie
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    // reload html view cart
+    addCartToHTML();
+}
+
+</script>
+
 
 </body>
 
