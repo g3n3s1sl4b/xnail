@@ -12,6 +12,10 @@
   <!-- Styles -->
   <link href="assets/css/page.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="icon" href="assets/img/favicon.png">
@@ -77,9 +81,15 @@
       </section>
 
       <!-- <a class="cart" href="catalog.html">CART</a> -->
-      <a class="cart" href="#">
-      <button class="btn btn-dark"></button>
-      </a>
+      
+      
+     
+          <div class="myCart">
+          <button type="button" class="btn btn-label btn-secondary">
+              <label><div class="totalQuantity">0</div></label>Cart
+          </button>
+          </div>
+
 
 
 
@@ -190,48 +200,25 @@
           <p class="lead">Manicure &amp; Pedicure</p>
         </header>
 
+        <div class="row gap-y">
 
-        <div class="row gap-y" id="products">
-          <div class="col-md-6 col-xl-3" data-shuffle="item" data-groups=steal>
+          <div class="col-md-6 col-xl-4">
             <div class="product-3">
-            <a class="product-media" href="#">
-            <!-- <span class="badge badge-success badge-pos-right">-20%</span> -->
-            <img src=http://thetheme.io/thesaas/assets/img/shop/14.jpg alt="product">
-            </a>
-            <div class="product-detail">
-            <div class="product-name">Test</div>
+              <a class="product-media" href="#">
+                <span class="badge badge-pill badge-success badge-pos-right">-25%</span>
+                <img src="../assets/img/bg/request.jpg" alt="product">
+              </a>
 
-            
+              <div class="product-detail">
+                <h6><a href="#">Sony PlayStation 4</a></h6>
+                <div class="product-price"><s>$299</s> $224</div>
+                <button class="btn btn-success">Add To Cart</button>
 
-            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
-              <div class="btn-group mr-2" role="group" aria-label="First group">
-                <div class="product__quantity"></div>
               </div>
-              
-              <a class="order"
-              data-sb-id-or-vendor-code=123
-              data-sb-product-name=TEST
-              data-sb-product-price=1
-              data-sb-product-quantity="1"
-              data-sb-product-img=http://thetheme.io/thesaas/assets/img/shop/14.jpg
-              >
-              <button type="button" class="btn btn-label btn-success">
-                <label><i class="fa fa-shopping-cart"></i></label>
-                <div class="product__price"><span class="product__price-number">5</span> €</div>
-              </button></a>
             </div>
+          </div>
 
-
-
-
-
-            
-            </div>
-            </div>
-            </div>
         </div>
-
-
 
         <div class="text-center mt-7">
           <a class="btn btn-outline-primary px-7" href="#">View all</a>
@@ -373,7 +360,7 @@
         </header>
 
         <div class="row gap-y">
-          <div class="col-md-6 col-xl-3">
+          <div class="col-md-6 col-xl-4">
             <div class="card card-body shadow-3 text-center bg-success text-white">
               <p class="my-5"><i class="icon-chat lead-6"></i></p>
               <h5 class="mb-5 fw-500">Whatsapp</h5>
@@ -410,7 +397,9 @@
     <!-- ./CONTACT -->
 
 
+  
   </main>
+
 
 
   <!-- Footer -->
@@ -531,33 +520,6 @@
   <!-- Scripts -->
   <script src="assets/js/page.min.js"></script>
   
-  <!-- Basket Setup -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <div class="smart-basket__wrapper"></div>
-  <script src="./smartbasket/js/smartbasket.min.js"></script>
-  <script>
-    $(function () {
-      $('.smart-basket__wrapper').smbasket({
-        productElement: 'product-detail',
-        buttonAddToBasket: 'order',
-        productPrice: 'product__price-number',
-        productSize: 'product__size-element',
-        productQuantityWrapper: 'product__quantity',
-        smartBasketMinArea: 'cart',
-        countryCode: '+49',
-        smartBasketCurrency: '€',
-        smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
-        agreement: {
-          isRequired: true,
-          isChecked: true,
-          isLink: 'https://artstranger.ru/privacy.html',
-        },
-        nameIsRequired: false,
-      });
-    });
-  </script>
-
-
 
 </body>
 
