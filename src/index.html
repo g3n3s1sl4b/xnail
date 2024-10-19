@@ -194,25 +194,45 @@
           <hr>
           <p class="lead">Manicure &amp; Pedicure</p>
         </header>
-          <div class="listProduct">
-          <div class="row gap-y">
-          <div class="item"> 
-          <!--
-          <div class="col-md-6 col-xl-4">
-          <div class="product-3 mb-3">
-          <span class="badge badge-pill badge-primary badge-pos-left">New</span>
-          <img src="../assets/img/bg/request.jpg" alt="product">
-          <div class="product-detail">
-          <h6><a href="#">Apple EarPods</a></h6>
-          <div class="product-price">$160</div>
-          </div>
-          </div>
-         </div> 
-         -->
-        </div>
-        </div> 
-        </div>
+          
+          <div class="row gap-y listProduct">
+          
 
+
+           <div class="col-md-6 col-xl-4">
+              <div class="product-3 mb-3">
+              <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+              <img src="../assets/img/bg/request.jpg" alt="product">
+              <div class="product-detail">
+              <h6><a href="#">My</a></h6>
+              <div class="product-price">$10</div>
+              </div>
+              </div>
+          </div> 
+
+           <div class="col-md-6 col-xl-4"> 
+              <div class="product-3 mb-3">
+              <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+              <img src="../assets/img/bg/request.jpg" alt="product">
+              <div class="product-detail">
+              <h6><a href="#">My</a></h6>
+              <div class="product-price">$10</div>
+              </div>
+              </div>
+           </div>
+
+           <div class="col-md-6 col-xl-4"> 
+            <div class="product-3 mb-3">
+            <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+            <img src="../assets/img/bg/request.jpg" alt="product">
+            <div class="product-detail">
+            <h6><a href="#">My</a></h6>
+            <div class="product-price">$10</div>
+            </div>
+            </div>
+         </div> 
+
+        </div>
         </div>
     </section>
 
@@ -604,26 +624,21 @@ function addDataToHTML(){
     {
         products.forEach(product => {
             let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
+            newProduct.classList.add('col-xl-4');
+            newProduct.classList.add('col-md-6');
             newProduct.innerHTML = `
-          <div class="col-md-6 col-xl-4">
-                
-            <div class="product-3 mb-3">
-                <span class="badge badge-pill badge-primary badge-pos-left">New</span>
-                <img src="${product.image}" alt="product">
-                <div class="product-detail">
-                    <h6><a href="#">${product.name}</a></h6>
-                    <div class="product-price">${product.price}</div>
-                    <button class="btn btn-success" onclick="addCart(${product.id})">Add To Cart</button>
-                </div>
-                </div>
-</div>
-
-            `;
-
+          <div class="product-3 mb-3">
+          <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+          <img src="${product.image}" alt="product">
+            <div class="product-detail">
+            <h6><a href="#">${product.name}</a></h6>
+            <div class="product-price">${product.price}</div>
+            <button class="btn btn-success" onclick="addCart(${product.id})">Add To Cart</button>
+            </div>
+          </div>
+          `;
             listProductHTML.appendChild(newProduct);
-
-        });
+        })
     }
 }
 //use cookie so the cart doesn't get lost on refresh page
@@ -631,12 +646,14 @@ function addDataToHTML(){
 let listCart = [];
 function checkCart(){
     var cookieValue = document.cookie
-    .split('; ')
+    .split('; ') // ? Chto eto ?
     .find(row => row.startsWith('listCart='));
     if(cookieValue){
         listCart = JSON.parse(cookieValue.split('=')[1]);
+        console.log('listCart from cookie',listCart);
     }else{
         listCart = [];
+        // console.log('listCart from cookie',cookieValue);
     }
 }
 checkCart();
@@ -712,8 +729,5 @@ function changeQuantity($idProduct, $type){
 }
 
 </script>
-
-
 </body>
-
 </html>
