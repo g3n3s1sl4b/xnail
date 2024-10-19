@@ -404,17 +404,16 @@
            
             <div class="col-md-8 col-xl-8 mx-auto">
               <form class="py-5">
-                <h3><strong>Order</strong></h3>
-                <p>We will contact you next 15 min</p>
-                
-                
+                <h3><strong>Cart</strong></h3>
+                <p>Please make an order.</p>
+
                 <div class="listCart">
                   <div class="item">
                   </div>
                 </div>
 
                 
-                <hr class="w-50">
+               <!--  <hr class="w-50"> -->
 
 
                 <div class="form-group">
@@ -656,17 +655,14 @@ let container = document.querySelector('.container');
 /* let close = document.querySelector('.close'); */
 
 /* iconCart.addEventListener('click', function(){
-    if(cart.style.right == '-100%'){
-        cart.style.right = '0';
-        container.style.transform = 'translateX(-400px)';
+  let totalQuantity = document.querySelector('.totalQuantity');
+    if(totalQuantity.innerText == 0){
+      console.log("I AM IN");
+      $("#modal-cart").modal("hide");
+      $("#modal-empty").modal("show");
     }else{
-        cart.style.right = '-100%';
-        container.style.transform = 'translateX(0)';
+      console.log("I AM OUT");
     }
-})
-close.addEventListener('click', function (){
-    cart.style.right = '-100%';
-    container.style.transform = 'translateX(0)';
 }) */
 
 let products = null;
@@ -742,6 +738,7 @@ function addCart($idProduct){
 }
 addCartToHTML();
 function addCartToHTML(){
+
     // clear data default
     let listCartHTML = document.querySelector('.listCart');
     listCartHTML.innerHTML = '';
@@ -761,23 +758,28 @@ function addCartToHTML(){
                         <div class="price">$${product.price} / 1 ps</div>
                      </div>
                      <div class="quantity">
-                        <button class="btn" onclick="changeQuantity(${product.id}, '-')">-</button>
-                        <span class="value">${product.quantity}</span>
-                        <button class="btn" onclick="changeQuantity(${product.id}, '+')">+</button>
+                      
+                                  <div class="btn-group">
+                                  <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '-')">-</button>
+                                  <button type="button" class="btn btn-white">${product.quantity}</button>
+                                  <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '+')">+</button>
+                                  </div>
+
+
                      </div>`;
                 listCartHTML.appendChild(newCart);
-                totalQuantity = totalQuantity + product.quantity;     
-                
+                totalQuantity = totalQuantity + product.quantity;
             }
         })
     }
     totalHTML.innerText = totalQuantity;
-    if (totalQuantity ==0) {
-      console.log("EMPTY CART");
+    if (totalQuantity == 0){
+      if ($('#modal-empty').length < 0){
+        console.log("OPEN")    
+      }
       $("#modal-cart").modal("hide");
-      $("#modal-empty").modal("show");
-    }
-        
+      /* $("#modal-empty").modal("show"); */
+     } 
 }
 function changeQuantity($idProduct, $type){
     switch ($type) {
