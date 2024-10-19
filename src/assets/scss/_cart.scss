@@ -1,6 +1,6 @@
 .product-3 button{
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     color: #fff;
     width: 50%;
@@ -17,29 +17,9 @@
     transform: translateX(-50%) translateY(0);
 }
 .cart{
-    color: #fff;
-    position: fixed;
-    width: 400px;
-    max-width: 80vw;
-    height: 100vh;
-    background-color: #c4c4c4;
-    top: 0px;
-    right: -100%;
     display: grid;
     grid-template-rows: 50px 1fr 50px;
     gap: 20px;
-    transition: right 0.5s;
-}
-
-.cart .buttons .checkout{
-    background-color: #E8BC0E;
-    color: #000;
-}
-.cart h2{
-    color: #E8BC0E;
-    padding: 20px;
-    height: 30px;
-    margin: 0;
 }
 
 .cart .listCart .item{
@@ -69,29 +49,10 @@
     width: 50px;
     text-align: center;
 }
-
 .cart .listCart{
     padding: 20px;
     overflow: auto;
 }
 .cart .listCart::-webkit-scrollbar{
     width: 0;
-}
-
-.cart .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-}
-.cart .buttons div{
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-.cart .buttons a{
-    color: #fff;
-    text-decoration: none;
 }

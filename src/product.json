@@ -7,7 +7,7 @@
         "group": "diamand",
         "count": 10,
         "discount": 20,
-        "image": "../assets/img/bg/request.jpg"
+        "image": "../assets/img/item.png"
     },
     {
         "id": 2,
@@ -17,6 +17,46 @@
         "group": "diamand",
         "count": 10,
         "discount": 20,
-        "image": "../assets/img/bg/request.jpg"
+        "image": "../assets/img/item.png"
+    },
+    {
+        "id": 3,
+        "onSale": true,
+        "name": "Deal 3",
+        "price": 100,
+        "group": "diamand",
+        "count": 10,
+        "discount": 20,
+        "image": "../assets/img/item.png"
+    },
+    {
+        "id": 4,
+        "onSale": true,
+        "name": "Deal 4",
+        "price": 100,
+        "group": "diamand",
+        "count": 10,
+        "discount": 20,
+        "image": "../assets/img/item.png"
+    },
+    {
+        "id": 5,
+        "onSale": true,
+        "name": "Deal 5",
+        "price": 100,
+        "group": "diamand",
+        "count": 10,
+        "discount": 20,
+        "image": "../assets/img/item.png"
+    },
+    {
+        "id": 6,
+        "onSale": true,
+        "name": "Deal 6",
+        "price": 100,
+        "group": "diamand",
+        "count": 10,
+        "discount": 20,
+        "image": "../assets/img/item.png"
     }
 ]

@@ -79,7 +79,7 @@
 
       
      
-          <div class="iconCart">
+          <div class="iconCart" data-toggle="modal" data-target="#modal-cart">
           <button type="button" class="btn btn-label btn-secondary">
               <label><div class="totalQuantity">0</div></label>Cart
           </button>
@@ -125,15 +125,17 @@
 
 
 
-    <!--     <section class="section">
+    <!--     
+    <section class="section">
       <div class="container">
         <div class="slider-arrows-circle-light px-8" data-provide="slider" data-arrows="true">
-          <div><img src="http://thetheme.io/thesaas/assets/img/thumb/1.jpg"></div>
-          <div><img src="http://thetheme.io/thesaas/assets/img/thumb/1.jpg"></div>
-          <div><img src="http://thetheme.io/thesaas/assets/img/thumb/1.jpg"></div>
+          <div><img src="https://modnica.club/uploads/posts/2021-11/thumbs/1636575816_21-modnica-club-p-manikyur-primeri-rabot-leto-49.jpg"></div>
+          <div><img src="https://modnica.club/uploads/posts/2021-12/thumbs/1639838310_8-modnica-club-p-lak-dlya-nogtei-fon-10.jpg"></div>
+          <div><img src="https://avatars.mds.yandex.net/i?id=b533d53cc9290735c9793b7219c1f935_l-7084676-images-thumbs&n=13"></div>
         </div>
       </div>
-    </section> -->
+    </section> 
+    -->
 
 
 
@@ -165,7 +167,7 @@
 
           <div class="col-md-6 col-lg-3">
             <p><i class="icon-chat lead-7 text-muted"></i></p>
-            <h5>24 x 7 Service</h5>
+            <h5>24/7 Service</h5>
             <p>Whatsapp, E-Mail</p>
           </div>
 
@@ -199,40 +201,23 @@
           
 
 
-           <div class="col-md-6 col-xl-4">
+           <div class="col-md-6 col-xl-3">
               <div class="product-3 mb-3">
-              <span class="badge badge-pill badge-primary badge-pos-left">New</span>
-              <img src="../assets/img/bg/request.jpg" alt="product">
+              <span class="badge badge-pill badge-primary badge-pos-left">Sale</span>
+              <img src="" alt="product">
               <div class="product-detail">
-              <h6><a href="#">My</a></h6>
+              <h6><a href="#">Bit</a></h6>
               <div class="product-price">$10</div>
               </div>
               </div>
-          </div> 
-
-           <div class="col-md-6 col-xl-4"> 
-              <div class="product-3 mb-3">
-              <span class="badge badge-pill badge-primary badge-pos-left">New</span>
-              <img src="../assets/img/bg/request.jpg" alt="product">
-              <div class="product-detail">
-              <h6><a href="#">My</a></h6>
-              <div class="product-price">$10</div>
-              </div>
-              </div>
-           </div>
-
-           <div class="col-md-6 col-xl-4"> 
-            <div class="product-3 mb-3">
-            <span class="badge badge-pill badge-primary badge-pos-left">New</span>
-            <img src="../assets/img/bg/request.jpg" alt="product">
-            <div class="product-detail">
-            <h6><a href="#">My</a></h6>
-            <div class="product-price">$10</div>
-            </div>
-            </div>
-         </div> 
+          </div>
 
         </div>
+
+        <div class="text-center mt-7">
+          <a class="btn btn-outline-primary px-7" href="#">View all</a>
+        </div>
+
         </div>
     </section>
 
@@ -397,7 +382,7 @@
             <div class="card card-body shadow-3 text-center bg-warning text-white">
               <p class="my-5"><i class="icon-streetsign lead-6"></i></p>
               <h5 class="mb-5 fw-500">Store</h5>
-              <p>Munich, Germany</p>
+              <p><a class="" data-toggle="modal" data-target="#modal-catalog">Munich, Germany</a></p>
             </div>
           </div>
         </div>
@@ -408,6 +393,69 @@
 
 
 
+<!-- MY CART-->
+<div class="cart">
+  <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body p-md-0">
+          <div class="row no-gutters">
+           
+            <div class="col-md-8 col-xl-8 mx-auto">
+              <form class="py-5">
+                <h3><strong>Order</strong></h3>
+                <p>We will contact you next 15 min</p>
+                
+                
+                <div class="listCart">
+                  <div class="item">
+                  </div>
+                </div>
+
+                
+                <hr class="w-50">
+
+
+                <div class="form-group">
+                  <input class="form-control" type="text" name="NAME" placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                  <input class="form-control" type="email" name="EMAIL" placeholder="Your Email">
+                </div>
+
+                <div class="form-group">
+                  <input class="form-control" type="phone" name="PHONE" placeholder="Your Phone">
+                </div>
+                <!-- <button class="btn btn-lg btn-block btn-primary">ORDER NOW</button> -->
+                <button class="btn btn-lg btn-block btn-primary">ORDER NOW</button>
+              </form>
+
+              <hr>
+
+              <div class="row align-items-center mb-5">
+                <div class="col">
+                  <p class="small-3 text-uppercase text-lightest ls-1 mb-0"><strong>Follow Us</strong></p>
+                </div>
+
+                <div class="col-auto">
+                  <div class="social social-bg-gray social-hover-bg-brand">
+                    <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
 
 
 
@@ -415,7 +463,7 @@
 
 
 
-
+<!-- 
     <div class="cart">
       <h2>
           CART
@@ -440,15 +488,7 @@
 
       </div>
 
-      <div class="buttons">
-          <div class="close">
-              CLOSE
-          </div>
-          <div class="checkout">
-              <a href="checkout.html">CHECKOUT</a>
-          </div>
-      </div>
-  </div>
+  </div> -->
 
 
 
@@ -494,6 +534,32 @@
     </div>
   </footer><!-- /.footer -->
 
+
+
+<!-- Empty Cart Modal -->
+<div class="modal fade" id="modal-empty" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <form class="input-round text-center" action="" method="post" target="_blank">
+          <p class="my-6">
+
+            <i class="icon-basket lead-7 text-muted"></i>
+
+          </p>
+          <h4>Empty Cart</h4>
+          <p>Put something here</p>
+          <br>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
   <!-- Modal 1 -->
@@ -587,9 +653,9 @@
 let iconCart = document.querySelector('.iconCart');
 let cart = document.querySelector('.cart');
 let container = document.querySelector('.container');
-let close = document.querySelector('.close');
+/* let close = document.querySelector('.close'); */
 
-iconCart.addEventListener('click', function(){
+/* iconCart.addEventListener('click', function(){
     if(cart.style.right == '-100%'){
         cart.style.right = '0';
         container.style.transform = 'translateX(-400px)';
@@ -601,7 +667,7 @@ iconCart.addEventListener('click', function(){
 close.addEventListener('click', function (){
     cart.style.right = '-100%';
     container.style.transform = 'translateX(0)';
-})
+}) */
 
 let products = null;
 // get data from file json
@@ -650,7 +716,7 @@ function checkCart(){
     .find(row => row.startsWith('listCart='));
     if(cookieValue){
         listCart = JSON.parse(cookieValue.split('=')[1]);
-        console.log('listCart from cookie',listCart);
+        console.log('COOKIE',listCart);
     }else{
         listCart = [];
         // console.log('listCart from cookie',cookieValue);
@@ -690,15 +756,15 @@ function addCartToHTML(){
                 newCart.classList.add('item');
                 newCart.innerHTML = 
                     `<img src="${product.image}">
-                    <div class="content">
+                     <div class="content">
                         <div class="name">${product.name}</div>
-                        <div class="price">$${product.price} / 1 product</div>
-                    </div>
-                    <div class="quantity">
+                        <div class="price">$${product.price} / 1 ps</div>
+                     </div>
+                     <div class="quantity">
                         <button onclick="changeQuantity(${product.id}, '-')">-</button>
                         <span class="value">${product.quantity}</span>
                         <button onclick="changeQuantity(${product.id}, '+')">+</button>
-                    </div>`;
+                     </div>`;
                 listCartHTML.appendChild(newCart);
                 totalQuantity = totalQuantity + product.quantity;
             }
@@ -717,6 +783,7 @@ function changeQuantity($idProduct, $type){
             // if quantity <= 0 then remove product in cart
             if(listCart[$idProduct].quantity <= 0){
                 delete listCart[$idProduct];
+                console.log("EMPTY CART");
             }
             break;
     
