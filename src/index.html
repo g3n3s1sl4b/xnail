@@ -676,7 +676,7 @@ fetch('product.json')
     .then(data => {
         products = data;
         addDataToHTML();
-        console.log(products);
+        console.log("JSON", products);
 })
 
 //show data product in list 
@@ -761,16 +761,23 @@ function addCartToHTML(){
                         <div class="price">$${product.price} / 1 ps</div>
                      </div>
                      <div class="quantity">
-                        <button onclick="changeQuantity(${product.id}, '-')">-</button>
+                        <button class="btn" onclick="changeQuantity(${product.id}, '-')">-</button>
                         <span class="value">${product.quantity}</span>
-                        <button onclick="changeQuantity(${product.id}, '+')">+</button>
+                        <button class="btn" onclick="changeQuantity(${product.id}, '+')">+</button>
                      </div>`;
                 listCartHTML.appendChild(newCart);
-                totalQuantity = totalQuantity + product.quantity;
+                totalQuantity = totalQuantity + product.quantity;     
+                
             }
         })
     }
     totalHTML.innerText = totalQuantity;
+    if (totalQuantity ==0) {
+      console.log("EMPTY CART");
+      $("#modal-cart").modal("hide");
+      $("#modal-empty").modal("show");
+    }
+        
 }
 function changeQuantity($idProduct, $type){
     switch ($type) {
@@ -782,8 +789,7 @@ function changeQuantity($idProduct, $type){
 
             // if quantity <= 0 then remove product in cart
             if(listCart[$idProduct].quantity <= 0){
-                delete listCart[$idProduct];
-                console.log("EMPTY CART");
+                delete listCart[$idProduct]; 
             }
             break;
     
@@ -792,6 +798,7 @@ function changeQuantity($idProduct, $type){
     }
     // save new data in cookie
     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+
     // reload html view cart
     addCartToHTML();
 }
