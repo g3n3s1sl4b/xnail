@@ -1,6 +1,6 @@
 Stage 1
 [ ] Hide modal-cart from home-page
-[ ] Add wishlist
+[ ] Add wishlist and Total Price
 [ ] Send Mail & TLG & AmoCRM
 [ ] Add <script> to page.js
 [ ] Add Rating + Views + Orders + Image Zoom
@@ -8,7 +8,7 @@ Stage 1
 [ ] Add Filter
 [ ] Add Sold Badge
 [ ] Add ViewMore
-[ ] Fix TopBar
+[ ] Fix Add to Basket
 
 Stage 2
 [ ] Run Server
