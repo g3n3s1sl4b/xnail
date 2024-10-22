@@ -8,8 +8,9 @@ on:
   push:
     # On which branch
     branches: ["main"]
-    # On which files
-    # paths: ["scripts/scripts.js", "styles/styles.scss"]
+    # On which files start modification start to run action
+    paths:
+      - 'src/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,11 +31,16 @@ jobs:
 
       - name: Commit files
         run: |
+          ls | grep -v "dist" | xargs rm -r
+          ls -la
           git config --local user.name github-actions[bot]
           git config --local user.email github-actions[bot]@users.noreply.github.com
-          ls | grep -v "dist" | xargs rm -r
-          git add dist/
-          timestamp=$(date -u)
-          git commit -m "Update gulp output files - latest data: ${timestamp}" || exit 0
           git status
-          ls -la
+          git add dist
+          git commit -m "RELEASE"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: output
+          # force: true
