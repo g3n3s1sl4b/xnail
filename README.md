@@ -1,3 +1,4 @@
+```
 Stage 1
 [ ] Hide modal-cart from home-page
 [ ] Add wishlist and Total Price
@@ -17,3 +18,4 @@ Stage 2
 [ ] Update JSON/DB/TackID
 [ ] Add AdminPage
 [ ] Add Tracking Info Mail to TrackID
+```
