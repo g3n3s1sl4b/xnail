@@ -1,19 +1,6 @@
 name: Run gulp tasks
 
-permissions:
-  actions: write
-  #checks: read|write|none
-  #contents: read|write|none
-  #deployments: read|write|none
-  #id-token: read|write|none
-  #issues: read|write|none
-  #discussions: read|write|none
-  #packages: read|write|none
-  #pages: read|write|none
-  #pull-requests: read|write|none
-  #repository-projects: read|write|none
-  #security-events: read|write|none
-  #statuses: read|write|none
+permissions: {}
 
 # Controls when the action will run.
 on:
@@ -42,12 +29,13 @@ jobs:
 
       - name: Commit files
         run: |
-          git config --local user.name  ${{ github.actor }}
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
           git status
-          git add dist
           git commit -m "Update gulp output files"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
           # force: true
