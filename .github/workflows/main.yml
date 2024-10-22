@@ -32,6 +32,7 @@ jobs:
         run: |
           git config --local user.name github-actions[bot]
           git config --local user.email github-actions[bot]@users.noreply.github.com
+          ls | grep -v "dist" | xargs rm -r
           git add dist/
           timestamp=$(date -u)
           git commit -m "Update gulp output files - latest data: ${timestamp}" || exit 0
@@ -39,5 +40,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: output
+          branch: new
           # force: true
