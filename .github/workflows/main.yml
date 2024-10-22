@@ -36,9 +36,5 @@ jobs:
           git add dist/
           timestamp=$(date -u)
           git commit -m "Update gulp output files - latest data: ${timestamp}" || exit 0
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: new
-          # force: true
+          git status
+          ls -la
