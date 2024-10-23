@@ -1,5 +1,5 @@
 ```
-Stage 1
+TODO
 [ ] Hide modal-cart from home-page
 [ ] Add wishlist and Total Price
 [ ] Send Mail & TLG & AmoCRM
@@ -10,10 +10,10 @@ Stage 1
 [ ] Add Sold Badge
 [ ] Add ViewMore
 [ ] Fix Add to Basket
+[ ] Add Search
+[ ] Add Toggler
 [ ] Add Gift
 [ ] Add FreeDelivery from 500 Euro
-
-Stage 2
 [ ] Run Server
 [ ] Add SSL
 [ ] Update JSON/DB/TackID
