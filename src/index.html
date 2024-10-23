@@ -546,17 +546,27 @@
   <div class="modal fade" id="modal-tech" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Specification</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p class="lead mb-0">Information</p>
+      <div class="modal-body bg-light">KSU : <span id="name"></span></div>
+      <table class="table table-bordered">
+      <!-- <thead>
+          <tr>
+            <th>Parametr</th>
+            <th>Value</th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <tr>
+            <th scope="row">L</th>
+            <td id="l"></td>
+          </tr>
+          <tr>
+            <th scope="row">D</th>
+            <td id="d"></td>
+          </tr>
+        </tbody>
+      </table>
       </div>
     </div>
-  </div>
   </div>
   <!-- /.tech -->
 
@@ -611,7 +621,7 @@
                 <button class="btn btn-success" onclick="addCart(${product.id})">Cart</button>
               </div>
               <div class="btn-group" role="group">     
-                <button class="btn btn-primary" onclick="showTech(${product.id})">Info</button>
+                <button class="btn btn-primary" onclick="showTech(${product.sku},${product.l},${product.d})">Info</button>
               </div>
             </div>
             <hr class="my-4">
@@ -649,8 +659,13 @@
     }
     checkCart();
 
-    function showTech($idProduct) {
-      $("#modal-tech").modal("show");
+    function showTech($name,$l,$d) {
+      $(document).ready(function(){
+        $(this).find('#name').text($name);
+        $(this).find('#l').text($l);
+        $(this).find('#d').text($d);
+        $("#modal-tech").modal("show");
+      });
     }
 
     function addCart($idProduct) {
@@ -701,7 +716,7 @@
       }
       totalHTML.innerText = totalQuantity;
       if (totalQuantity == 0) {
-        $("#modal-cart").modal("hide");
+        $("#modal-empty").modal("hide");
       }
     }
 
