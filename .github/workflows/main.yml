@@ -38,9 +38,10 @@ jobs:
           git status
           git add dist
           git commit -m "RELEASE"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: output
+          git push -u origin new
+      # - name: Push changes
+        # uses: ad-m/github-push-action@master
+        # with:
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          # branch: output
           # force: true
