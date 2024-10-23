@@ -29,8 +29,11 @@ jobs:
       - name: Clean files
         run: |
           ls | grep -v "dist" | xargs rm -r
+          mv dist/* .
           rm -rf .gitignore
           rm -rf .github
+          rm -rf dist
+          ls -la
       # - uses: actions/checkout@v2
       - name: Commit files
         run: |
