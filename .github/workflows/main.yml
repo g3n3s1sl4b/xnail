@@ -1,24 +1,17 @@
-name: Run gulp tasks
+name: Run & Publish
 
 permissions:
   contents: write
 
-# Controls when the action will run.
 on:
   push:
-    # On which branch
     branches: ["main"]
-    # On which files start modification start to run action
-    # paths:
-      # - 'src/**'
+    paths:
+      - 'src/**'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # Job name
   build:
-    # Runner name
     runs-on: ubuntu-latest
-      
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -33,8 +26,6 @@ jobs:
           rm -rf .gitignore
           rm -rf .github
           rm -rf dist
-          ls -la
-      # - uses: actions/checkout@v2
       - name: Commit files
         run: |
           git config --local user.name github-actions[bot]

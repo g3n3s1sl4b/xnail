@@ -11,7 +11,7 @@ Stage 1
 [ ] Add ViewMore
 [ ] Fix Add to Basket
 [ ] Add Gift
-[ ] Add FreeDekuvery from 500 Euro
+[ ] Add FreeDelivery from 500 Euro
 
 Stage 2
 [ ] Run Server
