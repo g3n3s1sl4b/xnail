@@ -30,7 +30,7 @@ jobs:
         run: |
           ls | grep -v "dist" | xargs rm -r
           ls -la
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
       - name: Commit files
         run: |
           git config --local user.name github-actions[bot]
