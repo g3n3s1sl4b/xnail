@@ -1,26 +1,24 @@
 ```
 TODO
-[ ] Hide modal-cart from home-page
-[ ] Add wishlist and Total Price
-[ ] Send Mail & TLG & AmoCRM
-[ ] Add <script> to page.js
-[ ] Add Rating + Views + Orders + Image Zoom
-[ ] Add Table of Specification
-[ ] Add Filter
-[ ] Add Sold Badge
-[ ] Add ViewMore
-[ ] Fix Add to Basket
-[ ] Add Search
-[ ] Add Toggler
-[ ] Add Gift
-[ ] Add GitHub Domain
-[ ] Add FreeDelivery from 500 Euro
-[ ] Run Server
-[ ] Add SSL
-[ ] Update JSON/DB/TackID
-[ ] Add AdminPage
-[ ] Add Tracking Info Mail to TrackID
-[ ] Add ScrollDown
-[ ] Add Blog
-[ ] Add Comment System
+[1] Hide modal-cart from home-page
+[1] Add Filter
+[1] Add Total Price
+[1] Send Mail & TLG & AmoCRM
+[1] Add <script> to page.js
+[1] Add Rating + Views
+[1] Add Table of Specification
+[1] Add Sold Badge
+[1] Add ViewMore
+[1] Fix Added to Basket
+[2] Add Search
+[1] Add Toggler
+[2] Add Gift
+[X] Add GitHub Domain
+[X] Run Server
+[X] Update JSON/DB/TackID
+[X] Add AdminPage
+[X] Add Tracking Info Mail to TrackID
+[3] Add ScrollDown
+[2] Add Blog
+[1] Add Comment System
 ```
