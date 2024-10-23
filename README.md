@@ -13,6 +13,7 @@ TODO
 [ ] Add Search
 [ ] Add Toggler
 [ ] Add Gift
+[ ] Add GitHub Domain
 [ ] Add FreeDelivery from 500 Euro
 [ ] Run Server
 [ ] Add SSL
@@ -20,4 +21,6 @@ TODO
 [ ] Add AdminPage
 [ ] Add Tracking Info Mail to TrackID
 [ ] Add ScrollDown
+[ ] Add Blog
+[ ] Add Comment System
 ```
