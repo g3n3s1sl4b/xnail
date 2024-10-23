@@ -18,9 +18,9 @@ jobs:
   build:
     # Runner name
     runs-on: ubuntu-latest
-
+      
     steps:
-      # Sets up node
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12.22.2
