@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "dev": "SET NODE_ENV=development && nodemon app.js",
+    "start": "export NODE_ENV=production && node app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.2",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.9",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "http-proxy-middleware": "^2.0.1",
+    "https": "^1.0.0",
+    "morgan": "^1.10.0",
+    "request": "^2.88.2",
+    "sphp": "^0.6.3",
+    "sqlite3": "^5.0.8"
+  }
+}

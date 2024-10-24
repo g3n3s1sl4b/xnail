@@ -1,6 +1,5 @@
 ```
 TODO
-Stage 1
     [1] Add Total Price
     [1] Fix Added to Basket
     [1] Add Rating + Views
@@ -11,7 +10,6 @@ Stage 1
     [1] Hide modal-cart from home-page
     [1] Send Mail & TLG & AmoCRM
     [1] Add ViewMore
-Stage 2
     [2] Add ScrollDown
     [2] Add JOB List
     [2] Add Tracking Info Mail to TrackID

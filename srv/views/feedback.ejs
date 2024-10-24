@@ -1,0 +1,63 @@
+<% title= 'Наши Отзывы'; %>
+<% text= 'Xnail'; %>
+<%- include('layout/header'); -%>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Contact form
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="section bg-gray">
+      <div class="container">
+        <header class="section-header">
+          <small>Контакт</small>
+          <h2 class="display-4">Обратная связь</h2>
+          <hr>
+          <p class="lead">Ваш отзыв о нашей компании!</p>
+        </header>
+
+        <form class="form-row input-border" action="/assets/php/sendmail.php" method="POST" data-form="mailer">
+          <div class="col-12">
+            <div class="alert alert-success d-on-success">Спасибо за отзыв!</div>
+          </div>
+
+          <div class="form-group col-sm-6 col-xl-4">
+            <input class="form-control form-control-lg" type="text" name="name" placeholder="ФИО" required minlength="3">
+          </div>
+
+          <div class="form-group col-sm-6 col-xl-4">
+            <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </div>
+
+          <div class="form-group col-sm-6 col-xl-4">
+            <input class="form-control form-control-lg" type="text" name="subject" placeholder="Тема" required minlength="3">
+          </div>
+
+          <div class="form-group col-12">
+            <textarea class="form-control form-control-lg" rows="4" placeholder="Отзыв" name="message" required minlength="7"></textarea>
+          </div>
+
+          <div class="col-12 text-center">
+            <button class="btn btn-xl btn-block btn-primary" type="submit">Отправить!</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+  </main><!-- /.main-content -->
+
+
+  <%- include('layout/footer'); -%>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/page.min.js"></script>
+
+</body>
+
+</html>

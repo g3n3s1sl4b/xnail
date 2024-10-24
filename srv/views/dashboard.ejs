@@ -1,0 +1,83 @@
+<% title= 'Личный Кабинет'; %>
+<% text= 'Xnail'; %>
+<%- include('layout/header'); -%>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Populate the page
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <small>Xnail</small>
+          <h2>Клиенты</h2>
+          <hr>
+        </header>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Дата</th>
+                  <th>Имя</th>
+                  <th>Телефон</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% if (userData.length !==0) { %>
+                    <% userData.forEach(function(data, index) { %>
+                <tr>
+                  <th scope="row">
+                    <%= index + 1 %>
+                  </th>
+                  <td>
+                    <%= data.date %>
+                  </td>
+                  <td>
+                    <%= data.user %>
+                  </td>
+                  <td>
+                    <%= data.mobile %>
+                  </td>
+                  <td>
+                    <a href="/delete?mobile=<%= data.mobile %>">Удалить</a>
+                  </td>
+                </tr>
+                <% }); %>
+                  <% } else { %>
+                    <tr>
+                      <td colspan="7">No Data Found</td>
+                    </tr>
+                    <% } %>
+                      </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="text-center">
+          <a class="btn btn-xl btn-outline-info w-200 mt-7" href="/logout">ВЫХОД</a><br>
+          <small class="text-lighter">Закрыть Сессию</small>
+        </p>
+
+      </div>
+
+    </section>
+  </main>
+  
+  <%- include('layout/footer'); -%>
+
+  <!-- Scripts -->
+  <script src="assets/js/page.min.js"></script>
+
+</body>
+
+</html>
