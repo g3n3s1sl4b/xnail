@@ -174,6 +174,18 @@
             <a class="nav-link" href="#" data-shuffle="button" data-group="wave">Wave</a>
           </nav>
 
+          <div class="row mb-7">
+            <div class="col-md-6 col-xl-4 mx-auto input-round">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="ti-search"></i></div>
+                </div>
+                <input class="form-control" type="text" data-shuffle="search" placeholder="Keayword">
+              </div>
+            </div>
+          </div>
+
+
           <div class="listProduct row gap-y">
           <div data-shuffle="list">
 
@@ -626,8 +638,9 @@
           let newProduct = document.createElement('div');
           newProduct.classList.add('col-xl-4');
           newProduct.classList.add('col-md-6');
-          
+
           // Check for Schuffle
+          newProduct.setAttribute('id', `${product.id}`);
           newProduct.setAttribute('data-shuffle', 'item');
           newProduct.setAttribute('data-groups', `${product.sub}`);
 
