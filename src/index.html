@@ -166,7 +166,16 @@
           <p class="lead">Manicure &amp; Pedicure</p>
         </header>
 
-        <div class="row gap-y listProduct">
+        <div data-provide="shuffle">
+
+          <nav class="nav nav-center nav-pills mb-7" data-shuffle="filter">
+            <a class="nav-link active" href="#" data-shuffle="button">All</a>
+            <a class="nav-link" href="#" data-shuffle="button" data-group="hai">HAI</a>
+            <a class="nav-link" href="#" data-shuffle="button" data-group="wave">Wave</a>
+          </nav>
+
+          <div class="listProduct row gap-y">
+          <div data-shuffle="list">
 
           <!-- Sample     
           <div class="col-md-6 col-xl-3">
@@ -181,6 +190,7 @@
           </div> 
           -->
 
+        </div>
         </div>
 
         <div class="text-center mt-7">
@@ -616,6 +626,11 @@
           let newProduct = document.createElement('div');
           newProduct.classList.add('col-xl-4');
           newProduct.classList.add('col-md-6');
+          
+          // Check for Schuffle
+          newProduct.setAttribute('data-shuffle', 'item');
+          newProduct.setAttribute('data-groups', `${product.sub}`);
+
           newProduct.innerHTML = `
           <div class="product-3 mb-3">
           <span class="badge badge-pill badge-primary badge-pos-left">New</span>        
