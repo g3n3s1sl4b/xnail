@@ -4,7 +4,7 @@ const http = require("http");
 const sqlite3 = require("sqlite3").verbose();
 const bcrypt = require("bcrypt");
 const cors = require("cors");
-const sphp = require("sphp");
+//const sphp = require("sphp");
 const express = require("express");
 const sessions = require("express-session");
 const cookieParser = require("cookie-parser"); // Login Page
@@ -222,7 +222,7 @@ app.get('/*', function (req, res, next) {
 })
 
 // Serve PHP
-app.use(sphp.express(path.join(__dirname, "public/")));
+// app.use(sphp.express(path.join(__dirname, "public/")));
 
 // Serve static folder 'public'
 app.use(express.static(path.join(__dirname, "public/")));
