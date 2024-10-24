@@ -5,6 +5,7 @@ TODO
 [1] Fix Added to Basket
 [1] Add ScrollDown
 [1] Add JOB List
+[1] Change Cart Design
 [1] Add ViewMore
 [1] Send Mail & TLG & AmoCRM
 [1] Hide modal-cart from home-page

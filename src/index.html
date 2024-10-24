@@ -382,9 +382,10 @@
 
         <div class="col-lg-6">
           <div class="nav nav-bold nav-uppercase nav-trim justify-content-center">
-            <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Policy</a>
             <a class="nav-link" href="#">Terms</a>
+            <a class="nav-link" href="#">Job</a>
+            <a class="nav-link" href="#">Track</a>
           </div>
         </div>
 
@@ -647,7 +648,8 @@
 
           newProduct.innerHTML = `
           <div class="product-3 mb-3">
-          <span class="badge badge-pill badge-primary badge-pos-left">New</span>        
+          <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+          <span class="badge badge-pill badge-danger badge-pos-right text-uppercase ls-1 fw-600">Sale</span>        
           <div class="product-detail bg-light">
             ISO : ${product.iso}
           </div>
@@ -737,20 +739,29 @@
             newCart.innerHTML =
               `<img src="${product.image}">
                      <div class="content">
-                     <div class="name">${product.name}</div>
+                     <div class="name">ISO : ${product.iso}</div>
                      <div class="price">$${product.price} / 1 ps</div>
                      </div>
                      <div class="quantity">
-                                  <div class="btn-group">
-                                  <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '-')">-</button>
-                                  <button type="button" class="btn btn-white">${product.quantity}</button>
-                                  <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '+')">+</button>
-                                  </div>
-                     </div>`;
+                     <div class="btn-group">
+                     <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '-')">-</button>
+                     <button type="button" class="btn btn-white">${product.quantity}</button>
+                     <button type="button" class="btn btn-square btn-secondary" onclick="changeQuantity(${product.id}, '+')">+</button>
+                     </div>
+                     </div>          
+                     `;
             listCartHTML.appendChild(newCart);
             totalQuantity = totalQuantity + product.quantity;
+            totalPrice = totalQuantity * product.price;
           }
         })
+
+        // Total Price of Cart > Check
+        let totalCart = document.createElement('div');
+        totalCart.classList.add('content');
+        totalCart.innerHTML = totalPrice;
+        listCartHTML.appendChild(totalCart);
+
       }
       totalHTML.innerText = totalQuantity;
       if (totalQuantity == 0) {
