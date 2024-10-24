@@ -377,6 +377,7 @@
             <a class="social-instagram" href="https://www.instagram.com/xnail"><i class="fa fa-instagram"></i></a>
             <a class="social-whatsapp" href="/"><i class="fa fa-whatsapp"></i></a>
             <a class="social-telegram" href="/"><i class="fa fa-telegram"></i></a>
+            <a class="social-git" data-toggle="modal" data-target="#modal-admin-login"><i class="fa fa-sign-in"></i></a>
           </div>
         </div>
 
@@ -393,6 +394,38 @@
     </div>
   </footer>
   <!-- /.footer -->
+
+ <!-- Admin -->
+ <div class="modal fade" id="modal-admin-login" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <form class="text-center" action="/login" method="post">
+          <h4 class="mb-5">Личный Кабинет</h4>
+          <div class="form-group">
+            <input class="form-control" minlength="3" maxlength="11" type="text" name="username" required placeholder="Пользователь" />
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" minlength="3" maxlength="11" type="password" name="password" required placeholder="Пароль" />
+          </div>
+
+          <button class="btn btn-lg btn-block btn-primary" type="submit">
+            Вход
+          </button>
+
+          <hr />
+
+          <p><a class="" href="/recover">Восстановить ?</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ./admin -->
 
   <!-- Cart-->
   <div class="cart">
@@ -517,7 +550,7 @@
                   <div class="social social-bg-gray social-hover-bg-brand">
                     <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
                     <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
-                    <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>    
                   </div>
                 </div>
               </div>
