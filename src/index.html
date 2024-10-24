@@ -543,17 +543,24 @@
   <!-- /.catalog -->
 
   <!-- Tech -->
-  <div class="modal fade" id="modal-tech" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body bg-light">KSU : <span id="name"></span></div>
-      <table class="table table-bordered">
-      <!-- <thead>
+
+
+
+  <div class="modal fade" id="modal-tech" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Specification</div>
+        </div>
+
+        <div class="modal-body">
+    <table class="table table-bordered m-0">
+      <thead>
           <tr>
             <th>Parametr</th>
             <th>Value</th>
           </tr>
-        </thead> -->
+        </thead> 
         <tbody>
           <tr>
             <th scope="row">L</th>
@@ -565,9 +572,19 @@
           </tr>
         </tbody>
       </table>
-      </div>
+  
+
     </div>
-  </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+       
+
   <!-- /.tech -->
 
   <!-- Main -->
@@ -621,7 +638,7 @@
                 <button class="btn btn-success" onclick="addCart(${product.id})">Cart</button>
               </div>
               <div class="btn-group" role="group">     
-                <button class="btn btn-primary" onclick="showTech(${product.sku},${product.l},${product.d})">Info</button>
+                <button class="btn btn-primary" onclick="showTech(${product.l},${product.d})">Info</button>
               </div>
             </div>
             <hr class="my-4">
@@ -632,7 +649,7 @@
                   <span>${product.brand}</span>
                 </div>
                 <div class="col-auto ml-auto">
-                  <span><i class="fa fa-eye pr-1 opacity-60"></i>${product.click}</span>
+                  <span><i class="fa fa-eye pr-1 opacity-60"></i>${product.id}</span>
                 </div>
               </div>
             </div>
@@ -659,9 +676,8 @@
     }
     checkCart();
 
-    function showTech($name,$l,$d) {
+    function showTech($l,$d) {
       $(document).ready(function(){
-        $(this).find('#name').text($name);
         $(this).find('#l').text($l);
         $(this).find('#d').text($d);
         $("#modal-tech").modal("show");
