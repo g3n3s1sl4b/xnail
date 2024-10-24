@@ -16,7 +16,7 @@
         "cd": 6,
         "shape": 0,
         "cl": 14,
-        "image": "assets/img/item.png"
+        "image": "assets/img/118135.png"
     },
     {
         "id": 2,
@@ -35,7 +35,7 @@
         "cd": 6,
         "shape": 20,
         "cl": 14,
-        "image": "assets/img/item.png"
+        "image": "assets/img/116195.png"
     },
     {
         "id": 3,
@@ -54,6 +54,6 @@
         "cd": 6,
         "shape": 20,
         "cl": 14,
-        "image": "assets/img/item.png"
+        "image": "assets/img/118217.png"
     }
 ]
