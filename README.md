@@ -14,7 +14,7 @@ TODO
 [1] Add Tracking Info Mail to TrackID
 [2] Add Gift
 [2] Add Blog & Comment System
-[3] Add GitHub Domain
-[3] Setup PM2 Server
-[3] Add AdminPage
+[2] Add GitHub Domain
+[2] Setup PM2 Server
+[2] Add AdminPage
 ```
