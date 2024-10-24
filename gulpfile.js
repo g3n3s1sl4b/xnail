@@ -160,7 +160,6 @@ function distCopy() {
   return gulp.src( ['src/**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('srv/public'));
 };
 
-
 /*
 |--------------------------------------------------------------------------
 | Clean /dist directory

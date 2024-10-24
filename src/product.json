@@ -16,7 +16,7 @@
         "cd": 6,
         "shape": 0,
         "cl": 14,
-        "image": "https://gtm-bits.eu/media/image/product/1924/md/kmiz_hartmetallfraeser_kegel_normal_500_104_194_172_060.webp"
+        "image": "assets/img/item.png"
     },
     {
         "id": 2,
@@ -35,7 +35,7 @@
         "cd": 6,
         "shape": 20,
         "cl": 14,
-        "image": "https://gtm-bits.eu/media/image/product/130/md/kmiz_hartmetallfraeser_rundbogen_normal_500_104_275_176_060.webp"
+        "image": "assets/img/item.png"
     },
     {
         "id": 3,
@@ -54,6 +54,6 @@
         "cd": 6,
         "shape": 20,
         "cl": 14,
-        "image": "https://gtm-bits.eu/media/image/product/4593/md/kmiz_hartmetallfraeser_rundbogen_welle_normal_500_104_275_190_060h.webp"
+        "image": "assets/img/item.png"
     }
 ]
