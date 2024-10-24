@@ -21,4 +21,5 @@ TODO
 [3] Add ScrollDown
 [2] Add Blog
 [1] Add Comment System
+[X] Add JOB List 
 ```
